@@ -4,7 +4,7 @@ customer-master:
     url: jdbc:mysql://localhost:3306/prd_customer?characterEncoding=UTF-8
     username: root
     password: root
-    driver-class-name: com.mysql.jdbc.Driver
+    driverClassName: com.mysql.jdbc.Driver
 
   #门店库
 store-master:
@@ -12,4 +12,4 @@ store-master:
     url: jdbc:mysql://localhost:3306/prd_store?characterEncoding=UTF-8
     username: root
     password: root
-    driver-class-name: com.mysql.jdbc.Driver
+    driverClassName: com.mysql.jdbc.Driver

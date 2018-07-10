@@ -1,4 +1,4 @@
-package com.yanle.prd.dao;
+package com.yanle.prd.dao.master;
 
 import com.yanle.prd.domain.Customer;
 import org.springframework.stereotype.Repository;

@@ -1,6 +1,7 @@
 package com.yanle.prd.web.controller;
 
 import com.yanle.prd.domain.Customer;
+import com.yanle.prd.domain.CustomerVo;
 import com.yanle.prd.domain.rpc.ResultDTO;
 import com.yanle.prd.domain.rpc.RpcCommonCode;
 import com.yanle.prd.service.CustomerService;
@@ -23,9 +24,9 @@ public class CustomerController {
     private CustomerService customerService;
 
     @GetMapping(value = "/{id}")
-    public ResultDTO<Customer> getCustomerInfoById(@PathVariable(value = "id") Long id) {
-        Customer customer = customerService.getCustomerInfoById(id);
-        return new ResultDTO<Customer>(RpcCommonCode.SUCCESS, null, customer);
+    public ResultDTO<CustomerVo> getCustomerInfoById(@PathVariable(value = "id") Long id) {
+        CustomerVo customerVo = customerService.getCustomerInfoById(id);
+        return new ResultDTO<CustomerVo>(RpcCommonCode.SUCCESS, null, customerVo);
     }
 
 }

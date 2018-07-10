@@ -1,6 +1,7 @@
 package com.yanle.prd.service;
 
 import com.yanle.prd.domain.Customer;
+import com.yanle.prd.domain.CustomerVo;
 
 /**
  * @Description: java类作用描述
@@ -9,5 +10,5 @@ import com.yanle.prd.domain.Customer;
  */
 public interface CustomerService {
 
-    public Customer getCustomerInfoById(Long id);
+    public CustomerVo getCustomerInfoById(Long id);
 }
