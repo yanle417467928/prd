@@ -52,7 +52,7 @@
             </dependency>
             <dependency>
                 <groupId>com.alibaba</groupId>
-                <artifactId>-spring-boot-stardruidter</artifactId>
+                <artifactId>druid-spring-boot-starter</artifactId>
                 <version>${druid.spring.boot.version}</version>
             </dependency>
 
