@@ -38,3 +38,7 @@ spring:
         login-password: admin
         allow:
         deny:
+
+server:
+  port: 8080
+
