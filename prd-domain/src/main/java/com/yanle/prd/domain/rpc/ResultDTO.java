@@ -2,6 +2,8 @@ package com.yanle.prd.domain.rpc;
 
 import lombok.*;
 
+import java.io.Serializable;
+
 /**
  * @Description: java类作用描述
  * @Author: Le Yan
@@ -12,7 +14,9 @@ import lombok.*;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class ResultDTO<T> {
+public class ResultDTO<T> implements Serializable {
+
+    private static final long serialVersionUID = -6651857774347310933L;
     private RpcCommonCode code;
 
     private String message;

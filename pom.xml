@@ -29,6 +29,11 @@
         <druid.spring.boot.version>1.1.10</druid.spring.boot.version>
         <mysql.connector.java.version>5.1.46</mysql.connector.java.version>
 
+        <dubbo.sprint.boot.version>2.0.0</dubbo.sprint.boot.version>
+        <pagehelper.version>1.2.3</pagehelper.version>
+        <zookeeper.version>3.4.5</zookeeper.version>
+        <zk.client.version>0.9</zk.client.version>
+
     </properties>
 
     <dependencyManagement>
@@ -61,6 +66,30 @@
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.connector.java.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.spring.boot</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo.sprint.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>${pagehelper.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.zookeeper</groupId>
+                <artifactId>zookeeper</artifactId>
+                <version>${zookeeper.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.101tec</groupId>
+                <artifactId>zkclient</artifactId>
+                <version>${zk.client.version}</version>
             </dependency>
 
         </dependencies>

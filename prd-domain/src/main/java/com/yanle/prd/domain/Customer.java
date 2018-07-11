@@ -2,6 +2,8 @@ package com.yanle.prd.domain;
 
 import lombok.*;
 
+import java.io.Serializable;
+
 /**
  * @Description: java类作用描述
  * @Author: Le Yan
@@ -13,8 +15,9 @@ import lombok.*;
 @EqualsAndHashCode
 @AllArgsConstructor
 @NoArgsConstructor
-public class Customer {
+public class Customer implements Serializable {
 
+    private static final long serialVersionUID = 6668894005374605101L;
     private Long id;
 
     private String name;
