@@ -1,7 +1,7 @@
 package com.yanle.prd.service.impl;
 
-import com.yanle.prd.dao.cluster.StoreDao;
-import com.yanle.prd.dao.master.CustomerDao;
+import com.yanle.prd.dao.master.StoreDao;
+import com.yanle.prd.dao.cluster.CustomerDao;
 import com.yanle.prd.domain.Customer;
 import com.yanle.prd.domain.CustomerVo;
 import com.yanle.prd.domain.Store;

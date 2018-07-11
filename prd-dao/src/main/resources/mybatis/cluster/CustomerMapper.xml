@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.yanle.prd.dao.master.CustomerDao">
+<mapper namespace="com.yanle.prd.dao.cluster.CustomerDao">
 
     <select id="getCustomerInfoById" parameterType="java.lang.Long" resultType="com.yanle.prd.domain.Customer">
         select id,name,age,store_id storeId  from customer_base_info where id= #{id}
