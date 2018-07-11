@@ -6,6 +6,7 @@ import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -13,6 +14,7 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 import javax.sql.DataSource;
+import java.sql.SQLException;
 
 /**
  * @Description: java类作用描述
@@ -40,20 +42,41 @@ public class MasterDataSourceConfig {
     @Value("${master.datasource.driverClassName}")
     private String driverClass;
 
+    @Value("${spring.datasource.druid.initial-size}")
+    private int initialSize;
+
+    @Value("${spring.datasource.druid.max-active}")
+    private int maxActive;
+
+    @Value("${spring.datasource.druid.min-idle}")
+    private int minIdle;
+
+    @Value("${spring.datasource.druid.max-wait}")
+    private int maxWait;
+
+    @Value("${spring.datasource.druid.filters}")
+    private String filters;
+
+
     @Bean(name = "masterDataSource")
     @Primary
-    public DataSource masterDataSource() {
+    public DataSource masterDataSource() throws SQLException {
         DruidDataSource dataSource = new DruidDataSource();
         dataSource.setDriverClassName(driverClass);
         dataSource.setUrl(url);
         dataSource.setUsername(user);
         dataSource.setPassword(password);
+        dataSource.setInitialSize(initialSize);
+        dataSource.setMaxActive(maxActive);
+        dataSource.setMinIdle(minIdle);
+        dataSource.setMaxWait(maxWait);
+        dataSource.setFilters(filters);
         return dataSource;
     }
 
     @Bean(name = "masterTransactionManager")
     @Primary
-    public DataSourceTransactionManager masterTransactionManager() {
+    public DataSourceTransactionManager masterTransactionManager() throws SQLException {
         return new DataSourceTransactionManager(masterDataSource());
     }
 
